@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3d0502">
+    <meta name="description" content="Celebrate Chhath Puja 2026 with a live countdown, the four-day journey, sacred offerings, a river of diyas and a shareable greeting card.">
+
+    <title>Chhath Puja 2026 — Faith • Devotion • Gratitude</title>
+
+    <script>document.documentElement.classList.add("js");</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <header class="navbar" id="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-sun" aria-hidden="true">☀</span>
+            <span>
+                <strong>Chhath Puja</strong>
+                <small>Faith · Devotion · Gratitude</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" data-spy="home">Home</a>
+            <a href="#about" data-spy="about">About</a>
+            <a href="#journey" data-spy="journey">Journey</a>
+            <a href="#offerings" data-spy="offerings">Offerings</a>
+            <a href="#card" data-spy="card">Wishes</a>
+            <a href="#faq" data-spy="faq">FAQ</a>
+            <a href="#diya" class="nav-cta">🪔 Float a Diya</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home" data-mood="dusk">
+            <div class="sky sky-dusk"></div>
+            <div class="sky sky-dawn"></div>
+            <div class="stars" id="stars" aria-hidden="true"></div>
+            <div class="cloud cloud-1" aria-hidden="true"></div>
+            <div class="cloud cloud-2" aria-hidden="true"></div>
+            <div class="sun" aria-hidden="true"></div>
+            <div class="sparkles" id="heroSparkles" aria-hidden="true"></div>
+
+            <svg class="birds" viewBox="0 0 200 60" aria-hidden="true">
+                <g fill="none" stroke="#2a0805" stroke-width="2" stroke-linecap="round">
+                    <path d="M10 30q6-9 12 0q6-9 12 0"/>
+                    <path d="M60 14q5-7 10 0q5-7 10 0"/>
+                    <path d="M110 38q5-7 10 0q5-7 10 0"/>
+                </g>
+            </svg>
+
+            <svg class="scene" viewBox="0 0 1440 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                <defs>
+                    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#4a0d05" stop-opacity=".25"/>
+                        <stop offset="1" stop-color="#130201" stop-opacity=".97"/>
+                    </linearGradient>
+
+                    <linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#fff"/>
+                        <stop offset="1" stop-color="#000"/>
+                    </linearGradient>
+                    <mask id="reflMask" maskUnits="userSpaceOnUse" x="0" y="185" width="1440" height="155">
+                        <rect x="0" y="185" width="1440" height="155" fill="url(#fadeGrad)"/>
+                    </mask>
+
+
+                    <!-- each body is cut along the curved edge of the waterline -->
+                    <mask id="footMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="340">
+                        <rect x="293.25" y="0" width="106" height="257.59" fill="#fff"/>
+                        <ellipse cx="330" cy="257.59" rx="21.37" ry="4.41" fill="#fff"/>
+                        <rect x="481.67" y="0" width="125" height="270.8" fill="#fff"/>
+                        <ellipse cx="525" cy="270.8" rx="24.67" ry="5.2" fill="#fff"/>
+                        <rect x="670.08" y="0" width="144" height="286.01" fill="#fff"/>
+                        <ellipse cx="720" cy="286.01" rx="27.96" ry="5.99" fill="#fff"/>
+                        <rect x="871.67" y="0" width="125" height="270.8" fill="#fff"/>
+                        <ellipse cx="915" cy="270.8" rx="24.67" ry="5.2" fill="#fff"/>
+                        <rect x="1073.25" y="0" width="106" height="257.59" fill="#fff"/>
+                        <ellipse cx="1110" cy="257.59" rx="21.37" ry="4.41" fill="#fff"/>
+                    </mask>
+
+                    <radialGradient id="flameGlow">
+                        <stop offset="0" stop-color="#ffe27a" stop-opacity=".85"/>
+                        <stop offset="1" stop-color="#ffb02e" stop-opacity="0"/>
+                    </radialGradient>
+
+                    <symbol id="palm" viewBox="0 0 120 200">
+                        <path d="M56 200C58 150 64 108 72 72" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+                        <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+                            <path d="M72 72C50 48 26 52 6 76"/>
+                            <path d="M72 72C54 38 30 34 10 46"/>
+                            <path d="M72 72C82 40 100 30 118 42"/>
+                            <path d="M72 72C92 52 110 60 116 84"/>
+                            <path d="M72 72C70 44 64 26 56 12"/>
+                        </g>
+                    </symbol>
+
+                    <!-- A devotee standing in the river, facing right, offering a soop to the sun.
+                         Sari colours come from --saree / --saree-dark / --blouse set on each <use>. -->
+                    <symbol id="woman" viewBox="0 0 150 240">
+                        <!-- pallu hanging down the back -->
+                        <path d="M46 58C35 70 28 98 24 132C22 158 24 180 30 200L52 194C45 162 45 124 52 94Z"
+                              style="fill:var(--saree-dark,#7d0a10);stroke:#f2b93b;stroke-width:1.6;stroke-linejoin:round"/>
+
+                        <!-- far arm -->
+                        <path d="M58 64L73 97L116 69" fill="none" stroke="#a9704a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+                        <!-- sari skirt with pleats -->
+                        <path d="M42 112C40 126 34 142 30 172C27 196 26 214 26 240L78 240C78 214 76 196 73 172C70 144 66 126 63 112Z"
+                              style="fill:var(--saree,#b3121a)"/>
+                        <g fill="none" stroke="#000" stroke-opacity=".22" stroke-width="1.2" stroke-linecap="round">
+                            <path d="M52 118C54 150 55 195 56 240"/>
+                            <path d="M58 118C61 150 64 195 66 240"/>
+                            <path d="M46 120C45 155 41 200 38 240"/>
+                            <path d="M64 120C68 150 72 195 75 240"/>
+                        </g>
+                        <path d="M28 214H77" stroke="#f2b93b" stroke-width="6" opacity=".95"/>
+                        <path d="M28 214H77" stroke="#7d0a10" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+
+                        <!-- bare midriff -->
+                        <path d="M42 94L64 94L63 114L43 114Z" fill="#c58c63"/>
+
+                        <!-- blouse -->
+                        <path d="M40 60C46 56 58 56 64 60C68 70 67 82 65 96L41 96C38 82 37 70 40 60Z" style="fill:var(--blouse,#e0891c)"/>
+
+                        <!-- pallu across the chest -->
+                        <path d="M44 60L55 58L69 100L60 114L48 112L56 92Z"
+                              style="fill:var(--saree,#b3121a);stroke:#f2b93b;stroke-width:1.6;stroke-linejoin:round"/>
+
+                        <!-- neck -->
+                        <path d="M48 40L57 42L58 58L46 58Z" fill="#b97a52"/>
+
+                        <!-- face in profile -->
+                        <path d="M44 18C48 12 58 11 62 16C64 19 64 22 64 25L67 31C67 33 65 33.6 64 33.6C64.5 35 64.5 36 63.5 37C64 39 63 42 60 44C56 47 50 46 46 42C42 36 41 26 44 18Z" fill="#cf9468"/>
+                        <path d="M46 42C50 46 56 47 60 44C63 42 64 39 63.5 37C60 41 52 42 46 38Z" fill="#a9704a" opacity=".55"/>
+                        <!-- features -->
+                        <path d="M57 25.2q2.6 1.6 5.2 0" fill="none" stroke="#2a120a" stroke-width="1.1" stroke-linecap="round"/>
+                        <path d="M56.6 22.4q3.2-1.8 6.4 0" fill="none" stroke="#2a120a" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M62.6 36q1.4.8 2.8 0" fill="none" stroke="#b3262c" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="62.6" cy="19.6" r="1.2" fill="#c8102e"/>
+                        <circle cx="65.4" cy="32.4" r="1.1" fill="none" stroke="#f2b93b" stroke-width=".8"/>
+                        <circle cx="47" cy="34" r="1.7" fill="#f2b93b"/>
+
+                        <!-- hair: hairline with a parting, loose strands and a braid down the back -->
+                        <path d="M62 14C56 12 47 14 44 19L44.4 26C46 20 51 16.8 57 16.6C60 16.5 62 17 63.4 18Z" fill="#1a0b06"/>
+                        <path d="M45 25C43.8 30 44.6 35 47 38" fill="none" stroke="#1a0b06" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M47.4 22C46.4 27 47 31 48.6 34" fill="none" stroke="#1a0b06" stroke-width="1" stroke-linecap="round" opacity=".8"/>
+                        <path d="M37 70C32 88 31 108 32 134" fill="none" stroke="#150804" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M33 87l5.4 2.2M32.2 97l5.4 2.2M31.8 107l5.4 2.2M31.8 117l5.4 2.2M32 127l5.4 2.2" stroke="#4a2616" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M29.6 135.5l5.2.6" stroke="#f2b93b" stroke-width="2.2" stroke-linecap="round"/>
+
+                        <!-- veil over the head, draping behind the shoulder -->
+                        <path d="M62 14C56 5 41 6 38 19C35 29 38 39 34 51C31 59 28 67 30 84L44 81C42 67 46 57 48 46C43 40 41 29 44 19C47 14 56 12 62 14Z"
+                              style="fill:var(--saree,#b3121a);stroke:#f2b93b;stroke-width:1.5;stroke-linejoin:round"/>
+                        <path d="M58 12.4L62 14.2" stroke="#c8102e" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <!-- necklace -->
+                        <path d="M48 57q6 11 14 4" fill="none" stroke="#f2b93b" stroke-width="1.3" stroke-linecap="round"/>
+                        <circle cx="57.5" cy="64" r="1.7" fill="#f2b93b"/>
+
+                        <!-- the soop: bamboo tray held up to the sun -->
+                        <g transform="rotate(-10 104 58)">
+                            <ellipse cx="104" cy="63" rx="32" ry="7.5" fill="#8a5a1e"/>
+                            <ellipse cx="104" cy="58" rx="32" ry="7.5" fill="#d9a24c"/>
+                            <ellipse cx="104" cy="57.6" rx="27.5" ry="5.4" fill="#b97f33"/>
+                        </g>
+
+                        <!-- offerings -->
+                        <path d="M97 54L88 6" stroke="#7bb34a" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M107 53L119 10" stroke="#6aa33a" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M95 36l5-1.4M92.6 22l5-1.4M110.6 38l5 1.4M114 24l5 1.4" stroke="#2f5c17" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M86 57C87 42 100 37 110 47" fill="none" stroke="#f1cf34" stroke-width="4.6" stroke-linecap="round"/>
+                        <path d="M90 58C91 45 101 41 109 50" fill="none" stroke="#f6dc4c" stroke-width="4.6" stroke-linecap="round"/>
+                        <path d="M94 58C95 48 102 45 108 52" fill="none" stroke="#e8c027" stroke-width="4.2" stroke-linecap="round"/>
+                        <path d="M85 57l-2 2.4" stroke="#6b4a12" stroke-width="2.4" stroke-linecap="round"/>
+                        <circle cx="118" cy="51" r="8.5" fill="#f08a1c"/>
+                        <circle cx="115.4" cy="48.4" r="2.6" fill="#ffc46b" opacity=".7"/>
+                        <circle cx="128" cy="52" r="5.3" fill="#c8242a"/>
+                        <path d="M128 46.8q1.6-2.2 3-2.4" stroke="#2f5c17" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+
+                        <!-- diya on the tray -->
+                        <circle cx="81" cy="50" r="13" fill="url(#flameGlow)"/>
+                        <path d="M73.5 59.5q7.5 8.5 15 0z" fill="#a8531b" stroke="#f2b93b" stroke-width="1"/>
+                        <path d="M81 59q-4.6-7.4 0-15.6q4.6 8 0 15.6z" fill="#ffc83a"/>
+                        <path d="M81 58q-2.2-4 0-8q2.2 4 0 8z" fill="#fff8cc"/>
+
+                        <!-- front rim of the tray -->
+                        <ellipse cx="104" cy="58" rx="32" ry="7.5" fill="none" stroke="#8a5a1e" stroke-width="2" transform="rotate(-10 104 58)"/>
+                        <ellipse cx="104" cy="58" rx="32" ry="7.5" fill="none" stroke="#f5d38a" stroke-opacity=".6" stroke-width="1" stroke-dasharray="2 2.6" transform="rotate(-10 104 58)"/>
+
+                        <!-- near arm, sleeve, hand and bangles -->
+                        <path d="M54 64L62 98L93 74" fill="none" stroke="#cf9468" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M54 64L58 80" fill="none" style="stroke:var(--blouse,#e0891c)" stroke-width="12" stroke-linecap="round"/>
+                        <ellipse cx="96" cy="68.5" rx="6.6" ry="4.4" transform="rotate(-30 96 68.5)" fill="#cf9468"/>
+                        <g stroke="#f4c04a" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M83.5 76L88.4 82"/>
+                            <path d="M80.6 78.2L85.4 84.4"/>
+                        </g>
+                        <g stroke="#c8102e" stroke-width="2" stroke-linecap="round">
+                            <path d="M86.2 73.6L91 79.4"/>
+                        </g>
+                    </symbol>
+                </defs>
+
+                <!-- distant palms and the far bank -->
+                <g transform="translate(0 20)">
+                    <g color="#1d0402">
+                        <use href="#palm" x="14" y="8" width="96" height="160"/>
+                        <use href="#palm" x="110" y="52" width="66" height="112"/>
+                        <use href="#palm" x="1330" y="8" width="96" height="160"/>
+                        <use href="#palm" x="1262" y="56" width="62" height="108"/>
+                    </g>
+                    <path d="M0 150C200 120 380 152 560 136C760 118 900 152 1100 134C1260 120 1360 142 1440 128L1440 168L0 168Z" fill="#1d0402"/>
+                </g>
+
+                <rect y="185" width="1440" height="155" fill="url(#waterGrad)"/>
+
+                <!-- the group flips so everyone faces the sun at sunrise -->
+                <g class="devotees">
+
+                    <!-- reflections, mirrored at the waterline -->
+                    <g mask="url(#reflMask)" opacity=".3">
+                        <use href="#woman" width="106" height="170" x="293.25" y="92" transform="translate(0 524) scale(1 -1)" style="--saree:#c21e6e;--saree-dark:#7f0f45;--blouse:#e9a317"/>
+                        <use href="#woman" width="125" height="200" x="481.67" y="76" transform="translate(0 552) scale(1 -1)" style="--saree:#e0701a;--saree-dark:#8f3d0a;--blouse:#b3121a"/>
+                        <use href="#woman" width="144" height="230" x="670.08" y="62" transform="translate(0 584) scale(1 -1)" style="--saree:#b3121a;--saree-dark:#6e0710;--blouse:#e0891c"/>
+                        <use href="#woman" width="125" height="200" x="871.67" y="76" transform="translate(0 552) scale(1 -1)" style="--saree:#9b1b4e;--saree-dark:#5e0f30;--blouse:#f0b42a"/>
+                        <use href="#woman" width="106" height="170" x="1073.25" y="92" transform="translate(0 524) scale(1 -1)" style="--saree:#d4541a;--saree-dark:#85300c;--blouse:#8a1a2a"/>
+                    </g>
+
+                    <!-- ripples and a soft pool around each body -->
+                    <g>
+                        <ellipse cx="330" cy="257.59" rx="31.4" ry="6.8" fill="#240803" opacity=".3"/>
+                        <ellipse cx="525" cy="270.8" rx="34.7" ry="7.6" fill="#240803" opacity=".3"/>
+                        <ellipse cx="720" cy="286.01" rx="38.0" ry="8.4" fill="#240803" opacity=".3"/>
+                        <ellipse cx="915" cy="270.8" rx="34.7" ry="7.6" fill="#240803" opacity=".3"/>
+                        <ellipse cx="1110" cy="257.59" rx="31.4" ry="6.8" fill="#240803" opacity=".3"/>
+                        <ellipse class="ripple" cx="330" cy="257.59" rx="29.4" ry="6.4" style="animation-delay:0"/>
+                        <ellipse class="ripple" cx="525" cy="270.8" rx="32.7" ry="7.2" style="animation-delay:-.9s"/>
+                        <ellipse class="ripple" cx="720" cy="286.01" rx="36.0" ry="8.0" style="animation-delay:-1.8s"/>
+                        <ellipse class="ripple" cx="915" cy="270.8" rx="32.7" ry="7.2" style="animation-delay:-2.7s"/>
+                        <ellipse class="ripple" cx="1110" cy="257.59" rx="29.4" ry="6.4" style="animation-delay:-1.3s"/>
+                    </g>
+
+                    <!-- devotees -->
+                    <g class="figures" mask="url(#footMask)">
+                        <use href="#woman" width="106" height="170" x="293.25" y="92" style="--saree:#c21e6e;--saree-dark:#7f0f45;--blouse:#e9a317"/>
+                        <use href="#woman" width="125" height="200" x="481.67" y="76" style="--saree:#e0701a;--saree-dark:#8f3d0a;--blouse:#b3121a"/>
+                        <use href="#woman" width="144" height="230" x="670.08" y="62" style="--saree:#b3121a;--saree-dark:#6e0710;--blouse:#e0891c"/>
+                        <use href="#woman" width="125" height="200" x="871.67" y="76" style="--saree:#9b1b4e;--saree-dark:#5e0f30;--blouse:#f0b42a"/>
+                        <use href="#woman" width="106" height="170" x="1073.25" y="92" style="--saree:#d4541a;--saree-dark:#85300c;--blouse:#8a1a2a"/>
+                    </g>
+
+                    <!-- the waterline wrapping the front of each body -->
+                    <g fill="none" stroke-linecap="round">
+                        <path d="M308.63 257.59A21.37 4.41 0 0 0 351.37 257.59" stroke="#ffe3a8" stroke-opacity=".75" stroke-width="1.4"/>
+                        <path d="M304.63 257.59A25.37 6.01 0 0 0 355.37 257.59" stroke="#ffd98a" stroke-opacity=".32" stroke-width="1.1"/>
+                        <path d="M500.33 270.8A24.67 5.2 0 0 0 549.67 270.8" stroke="#ffe3a8" stroke-opacity=".75" stroke-width="1.4"/>
+                        <path d="M496.33 270.8A28.67 6.8 0 0 0 553.67 270.8" stroke="#ffd98a" stroke-opacity=".32" stroke-width="1.1"/>
+                        <path d="M692.04 286.01A27.96 5.99 0 0 0 747.96 286.01" stroke="#ffe3a8" stroke-opacity=".75" stroke-width="1.4"/>
+                        <path d="M688.04 286.01A31.96 7.59 0 0 0 751.96 286.01" stroke="#ffd98a" stroke-opacity=".32" stroke-width="1.1"/>
+                        <path d="M890.33 270.8A24.67 5.2 0 0 0 939.67 270.8" stroke="#ffe3a8" stroke-opacity=".75" stroke-width="1.4"/>
+                        <path d="M886.33 270.8A28.67 6.8 0 0 0 943.67 270.8" stroke="#ffd98a" stroke-opacity=".32" stroke-width="1.1"/>
+                        <path d="M1088.63 257.59A21.37 4.41 0 0 0 1131.37 257.59" stroke="#ffe3a8" stroke-opacity=".75" stroke-width="1.4"/>
+                        <path d="M1084.63 257.59A25.37 6.01 0 0 0 1135.37 257.59" stroke="#ffd98a" stroke-opacity=".32" stroke-width="1.1"/>
+                    </g>
+                </g>
+            </svg>
+
+            <div class="reflection" aria-hidden="true"></div>
+
+            <div class="hero-copy">
+                <p class="om" aria-hidden="true">ॐ</p>
+                <p class="eyebrow">A SACRED CELEBRATION OF THE SUN · 2026</p>
+
+                <h1>Happy <span>Chhath Puja</span></h1>
+
+                <p class="hero-subtitle">Surya Dev Ki Kripa, Sab Par Ho Hamesha</p>
+                <p class="hero-description">
+                    Let us come together to celebrate the divine energy of the Sun
+                    and give thanks for life, health and prosperity.
+                </p>
+            </div>
+
+            <div class="mood-toggle" role="group" aria-label="Choose the sunset or sunrise scene">
+                <button type="button" data-mood="dusk" aria-pressed="true">🌇 Sandhya · Sunset</button>
+                <button type="button" data-mood="dawn" aria-pressed="false">🌅 Usha · Sunrise</button>
+            </div>
+
+            <div class="countdown-wrap" id="countdown">
+                <article class="countdown-card">
+                    <div class="countdown-heading">
+                        <span class="sun-symbol" aria-hidden="true">☀</span>
+                        <div>
+                            <h2>Sandhya Arghya</h2>
+                            <p>Evening offering · Sun 15 Nov</p>
+                        </div>
+                        <span class="status" data-status="upcoming">Upcoming</span>
+                    </div>
+                    <div class="timer" id="eveningTimer">
+                        <div class="time-box"><strong data-unit="days">00</strong><span>Days</span></div>
+                        <div class="time-box"><strong data-unit="hours">00</strong><span>Hours</span></div>
+                        <div class="time-box"><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+                        <div class="time-box"><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+                    </div>
+                </article>
+
+                <article class="countdown-card">
+                    <div class="countdown-heading">
+                        <span class="sun-symbol" aria-hidden="true">☀</span>
+                        <div>
+                            <h2>Usha Arghya</h2>
+                            <p>Morning offering · Mon 16 Nov</p>
+                        </div>
+                        <span class="status" data-status="upcoming">Upcoming</span>
+                    </div>
+                    <div class="timer" id="morningTimer">
+                        <div class="time-box"><strong data-unit="days">00</strong><span>Days</span></div>
+                        <div class="time-box"><strong data-unit="hours">00</strong><span>Hours</span></div>
+                        <div class="time-box"><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+                        <div class="time-box"><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="timing-note">Times are approximate (about 5:00 PM and 6:00 AM, your local time). Sunset and sunrise differ by city, so confirm with your local panchang.</p>
+
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-gold">🙏 Know More About Chhath</a>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+            <div class="section-heading reveal">
+                <p class="section-kicker">A TRADITION OF FAITH</p>
+                <h2>The Festival of <span>Devotion</span></h2>
+                <p>
+                    Chhath Puja is a sacred festival dedicated to Surya Dev and
+                    Chhathi Maiya. It celebrates faith, purity, nature and the
+                    bond between families and communities.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <article class="value-card reveal" style="--d:0ms">
+                    <div class="value-icon" aria-hidden="true">☀</div>
+                    <h3>Faith</h3>
+                    <p>Deep devotion to Surya Dev and Chhathi Maiya.</p>
+                </article>
+                <article class="value-card reveal" style="--d:100ms">
+                    <div class="value-icon" aria-hidden="true">🌿</div>
+                    <h3>Purity</h3>
+                    <p>A time for discipline, cleanliness and selflessness.</p>
+                </article>
+                <article class="value-card reveal" style="--d:200ms">
+                    <div class="value-icon" aria-hidden="true">🤝</div>
+                    <h3>Togetherness</h3>
+                    <p>Families and communities come together in prayer.</p>
+                </article>
+                <article class="value-card reveal" style="--d:300ms">
+                    <div class="value-icon" aria-hidden="true">🪷</div>
+                    <h3>Gratitude</h3>
+                    <p>Giving thanks for the energy that sustains life.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= MARQUEE ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>ॐ सूर्याय नमः</span><span>✦</span><span>जय छठी मैया</span><span>✦</span><span>ॐ आदित्याय नमः</span><span>✦</span><span>छठ पूजा की हार्दिक शुभकामनाएँ</span><span>✦</span>
+                <span>ॐ सूर्याय नमः</span><span>✦</span><span>जय छठी मैया</span><span>✦</span><span>ॐ आदित्याय नमः</span><span>✦</span><span>छठ पूजा की हार्दिक शुभकामनाएँ</span><span>✦</span>
+            </div>
+        </div>
+
+        <!-- ================= JOURNEY ================= -->
+        <section class="journey section" id="journey">
+            <div class="section-heading reveal">
+                <p class="section-kicker">FOUR SACRED DAYS</p>
+                <h2>The <span>Journey</span> of Chhath</h2>
+                <p>From a purifying river bath to the first light of dawn, each day has its own rhythm of prayer.</p>
+            </div>
+
+            <div class="timeline" id="timeline">
+                <article class="day-card reveal" data-date="2026-11-13" style="--d:0ms">
+                    <span class="day-num">1</span>
+                    <p class="day-date">Fri · 13 Nov</p>
+                    <h3>Nahay Khay</h3>
+                    <p class="day-hindi">नहाय-खाय</p>
+                    <p>Devotees bathe in a river, clean the home and eat one pure, simple meal, commonly rice, chana dal and bottle gourd.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-14" style="--d:120ms">
+                    <span class="day-num">2</span>
+                    <p class="day-date">Sat · 14 Nov</p>
+                    <h3>Kharna</h3>
+                    <p class="day-hindi">खरना</p>
+                    <p>A fast from dawn to dusk, broken after sunset with sweet kheer and roti shared as prasad. The long fast begins.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-15" style="--d:240ms">
+                    <span class="day-num">3</span>
+                    <p class="day-date">Sun · 15 Nov</p>
+                    <h3>Sandhya Arghya</h3>
+                    <p class="day-hindi">संध्या अर्घ्य</p>
+                    <p>Families gather at the ghat and offer arghya to the setting sun, with soops of thekua and fruit and folk songs in the air.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-16" style="--d:360ms">
+                    <span class="day-num">4</span>
+                    <p class="day-date">Mon · 16 Nov</p>
+                    <h3>Usha Arghya</h3>
+                    <p class="day-hindi">उषा अर्घ्य</p>
+                    <p>At dawn, devotees stand in the water and greet the rising sun. The fast is broken and prasad is shared with everyone.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= OFFERINGS ================= -->
+        <section class="offerings section" id="offerings">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">THE SACRED SOOP</p>
+                <h2>Offerings of <span>Gratitude</span></h2>
+                <p>Every item in the bamboo soop comes from the earth and the season, offered with thanks.</p>
+            </div>
+
+            <div class="offer-grid">
+                <article class="offer-card reveal" style="--d:0ms">
+                    <span class="offer-emoji" aria-hidden="true">🍪</span>
+                    <h3>Thekua</h3>
+                    <p>The signature prasad: a crisp sweet of wheat flour and jaggery fried in ghee.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:80ms">
+                    <span class="offer-emoji" aria-hidden="true">🎋</span>
+                    <h3>Sugarcane</h3>
+                    <p>Tall stalks of the winter harvest, often tied together near the ghat.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:160ms">
+                    <span class="offer-emoji" aria-hidden="true">🥥</span>
+                    <h3>Coconut</h3>
+                    <p>A whole coconut, a symbol of purity and an offering in countless Hindu rituals.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:240ms">
+                    <span class="offer-emoji" aria-hidden="true">🍌</span>
+                    <h3>Seasonal Fruit</h3>
+                    <p>Bananas, oranges, pomelo and more, offered fresh as the season's gifts.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:320ms">
+                    <span class="offer-emoji" aria-hidden="true">🧺</span>
+                    <h3>Soop &amp; Daura</h3>
+                    <p>Handwoven bamboo trays and baskets that carry the offerings to the water.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:400ms">
+                    <span class="offer-emoji" aria-hidden="true">🪔</span>
+                    <h3>Diya</h3>
+                    <p>Earthen lamps lit at the riverbank, their light floating across the water.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= DIYA RIVER ================= -->
+        <section class="diya-section section" id="diya">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">A QUIET MOMENT</p>
+                <h2>Float a <span>Diya</span> on the River</h2>
+                <p>Tap or click anywhere on the water to release a lamp, and make a silent wish as it drifts away.</p>
+            </div>
+
+            <div class="river-box reveal" id="riverBox" role="button" tabindex="0" aria-label="Float a diya on the river. Press Enter or Space.">
+                <div class="river-glow"></div>
+                <p class="river-hint" id="riverHint" aria-live="polite">Tap the water 🪔</p>
+            </div>
+
+            <div class="diya-actions">
+                <button type="button" class="btn btn-gold" id="diyaButton">🪔 Float a Diya</button>
+                <div class="diya-stats">
+                    <p class="stat">You have lit <strong id="diyaCount">0</strong> diyas</p>
+                    <p class="stat stat-world">🌍 Worldwide lit <strong id="worldCount">…</strong> diyas</p>
+                </div>
+                <p class="stat-note" id="worldNote" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- ================= GREETING CARD ================= -->
+        <section class="card-section section" id="card">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">SEND YOUR WISHES</p>
+                <h2>Make a Chhath <span>Greeting Card</span></h2>
+                <p>Add your name, pick a sky and share the blessings with family and friends.</p>
+            </div>
+
+            <div class="card-layout">
+                <form class="card-form reveal" id="cardForm">
+                    <label class="field">
+                        <span>Your name</span>
+                        <input type="text" id="cardName" maxlength="28" placeholder="e.g. Anita &amp; family" autocomplete="name">
+                    </label>
+
+                    <label class="field">
+                        <span>Blessing</span>
+                        <select id="cardMsg">
+                            <option value="0">Health, happiness and prosperity</option>
+                            <option value="1">Faith, gratitude and golden light</option>
+                            <option value="2">Peace and joy for your home</option>
+                        </select>
+                    </label>
+
+                    <fieldset class="field">
+                        <legend>Sky</legend>
+                        <div class="swatches">
+                            <label><input type="radio" name="theme" value="dusk" checked><span class="swatch swatch-dusk">Sunset</span></label>
+                            <label><input type="radio" name="theme" value="dawn"><span class="swatch swatch-dawn">Sunrise</span></label>
+                            <label><input type="radio" name="theme" value="gold"><span class="swatch swatch-gold">Golden</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="card-actions">
+                        <button type="button" class="btn btn-gold" id="cardDownload">⬇ Download</button>
+                        <button type="button" class="btn btn-ghost" id="cardShare" hidden>📤 Share</button>
+                        <a class="btn btn-ghost" id="cardWhatsApp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </form>
+
+                <div class="card-preview reveal" style="--d:120ms">
+                    <canvas id="cardCanvas" width="1080" height="1080" role="img" aria-label="Chhath Puja greeting card preview"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="faq section" id="faq">
+            <div class="section-heading reveal">
+                <p class="section-kicker">GOOD TO KNOW</p>
+                <h2>Questions &amp; <span>Answers</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="reveal">
+                    <summary>What is Chhath Puja?</summary>
+                    <p>An ancient Hindu festival honouring Surya, the Sun god, and Chhathi Maiya. It falls on the sixth day (Shashthi) of the bright fortnight of Kartik, a few days after Diwali. It is celebrated most widely in Bihar, Jharkhand, eastern Uttar Pradesh and the Terai region of Nepal, and by communities around the world.</p>
+                </details>
+                <details class="reveal">
+                    <summary>Why are offerings made at sunset and sunrise?</summary>
+                    <p>The rituals thank the Sun for sustaining life. The setting sun is honoured in the evening (Sandhya Arghya) and the rising sun the next morning (Usha Arghya), with devotees standing in the water of a river or pond.</p>
+                </details>
+                <details class="reveal">
+                    <summary>What is the fast like?</summary>
+                    <p>Devotees, known as vratis, observe a strict fast. After Kharna, many keep a nirjala fast, with no food or water, for roughly 36 hours until the morning arghya. Cleanliness and simple, carefully prepared food are central to the festival.</p>
+                </details>
+                <details class="reveal">
+                    <summary>Can anyone take part?</summary>
+                    <p>Yes. Both women and men observe Chhath, and neighbours often help clean the ghats and share prasad. If you visit a ghat, dress modestly, keep footwear away from the offering area and follow local guidance.</p>
+                </details>
+                <details class="reveal">
+                    <summary>How accurate are the countdowns?</summary>
+                    <p>They use approximate times (about 5:00 PM and 6:00 AM) in your device's local time. Sunset and sunrise vary by city, so please confirm exact timings with your local panchang or ghat committee.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-sun" aria-hidden="true">☀</div>
+        <h3>॥ जय छठी मैया ॥</h3>
+        <p>Faith <span>•</span> Devotion <span>•</span> Gratitude</p>
+        <small>© 2026 Chhath Puja Celebration</small>
+    </footer>
+
+
+</body>
+</html>
