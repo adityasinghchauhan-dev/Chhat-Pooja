@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3d0502">
+    <meta name="description" content="Celebrate Chhath Puja 2026 with a live countdown, the four-day journey, sacred offerings, a river of diyas and a shareable greeting card.">
+
+    <title>Chhath Puja 2026 — Faith • Devotion • Gratitude</title>
+
+    <script>document.documentElement.classList.add("js");</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <header class="navbar" id="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-sun" aria-hidden="true">☀</span>
+            <span>
+                <strong>Chhath Puja</strong>
+                <small>Faith · Devotion · Gratitude</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" data-spy="home">Home</a>
+            <a href="#about" data-spy="about">About</a>
+            <a href="#journey" data-spy="journey">Journey</a>
+            <a href="#offerings" data-spy="offerings">Offerings</a>
+            <a href="#card" data-spy="card">Wishes</a>
+            <a href="#faq" data-spy="faq">FAQ</a>
+            <a href="#diya" class="nav-cta">🪔 Float a Diya</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home" data-mood="dusk">
+            <div class="sky sky-dusk"></div>
+            <div class="sky sky-dawn"></div>
+            <div class="stars" id="stars" aria-hidden="true"></div>
+            <div class="cloud cloud-1" aria-hidden="true"></div>
+            <div class="cloud cloud-2" aria-hidden="true"></div>
+            <div class="sun" aria-hidden="true"></div>
+            <div class="sparkles" id="heroSparkles" aria-hidden="true"></div>
+
+            <svg class="birds" viewBox="0 0 200 60" aria-hidden="true">
+                <g fill="none" stroke="#2a0805" stroke-width="2" stroke-linecap="round">
+                    <path d="M10 30q6-9 12 0q6-9 12 0"/>
+                    <path d="M60 14q5-7 10 0q5-7 10 0"/>
+                    <path d="M110 38q5-7 10 0q5-7 10 0"/>
+                </g>
+            </svg>
+
+            <svg class="scene" viewBox="0 0 1440 280" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                <defs>
+                    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#4a0d05" stop-opacity=".25"/>
+                        <stop offset="1" stop-color="#130201" stop-opacity=".97"/>
+                    </linearGradient>
+
+                    <symbol id="dev" viewBox="0 0 60 120">
+                        <ellipse cx="30" cy="6" rx="19" ry="5" fill="currentColor"/>
+                        <path d="M24 40L17 9M36 40L43 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="30" cy="27" r="8.5" fill="currentColor"/>
+                        <path d="M30 34C19 38 17 68 11 120H49C43 68 41 38 30 34Z" fill="currentColor"/>
+                    </symbol>
+
+                    <symbol id="palm" viewBox="0 0 120 200">
+                        <path d="M56 200C58 150 64 108 72 72" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+                        <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+                            <path d="M72 72C50 48 26 52 6 76"/>
+                            <path d="M72 72C54 38 30 34 10 46"/>
+                            <path d="M72 72C82 40 100 30 118 42"/>
+                            <path d="M72 72C92 52 110 60 116 84"/>
+                            <path d="M72 72C70 44 64 26 56 12"/>
+                        </g>
+                    </symbol>
+                </defs>
+
+                <g color="#1d0402">
+                    <use href="#palm" x="14" y="8" width="96" height="160"/>
+                    <use href="#palm" x="110" y="52" width="66" height="112"/>
+                    <use href="#palm" x="1330" y="8" width="96" height="160"/>
+                    <use href="#palm" x="1262" y="56" width="62" height="108"/>
+                </g>
+
+                <path d="M0 150C200 120 380 152 560 136C760 118 900 152 1100 134C1260 120 1360 142 1440 128L1440 168L0 168Z" fill="#1d0402"/>
+                <rect y="165" width="1440" height="115" fill="url(#waterGrad)"/>
+
+                <g color="#150201" opacity=".2" transform="translate(0 344) scale(1 -1)">
+                    <use href="#dev" x="275" y="72" width="50" height="100"/>
+                    <use href="#dev" x="473" y="62" width="55" height="110"/>
+                    <use href="#dev" x="658" y="44" width="64" height="128"/>
+                    <use href="#dev" x="853" y="62" width="55" height="110"/>
+                    <use href="#dev" x="1035" y="72" width="50" height="100"/>
+                </g>
+
+                <g color="#150201">
+                    <use href="#dev" x="275" y="72" width="50" height="100"/>
+                    <use href="#dev" x="473" y="62" width="55" height="110"/>
+                    <use href="#dev" x="658" y="44" width="64" height="128"/>
+                    <use href="#dev" x="853" y="62" width="55" height="110"/>
+                    <use href="#dev" x="1035" y="72" width="50" height="100"/>
+                </g>
+
+                <ellipse class="ripple" cx="300" cy="173" rx="38" ry="4"/>
+                <ellipse class="ripple" cx="500" cy="173" rx="42" ry="4" style="animation-delay:-.9s"/>
+                <ellipse class="ripple" cx="690" cy="173" rx="48" ry="5" style="animation-delay:-1.8s"/>
+                <ellipse class="ripple" cx="880" cy="173" rx="42" ry="4" style="animation-delay:-2.7s"/>
+                <ellipse class="ripple" cx="1060" cy="173" rx="38" ry="4" style="animation-delay:-1.3s"/>
+            </svg>
+
+            <div class="reflection" aria-hidden="true"></div>
+
+            <div class="hero-copy">
+                <p class="om" aria-hidden="true">ॐ</p>
+                <p class="eyebrow">A SACRED CELEBRATION OF THE SUN · 2026</p>
+
+                <h1>Happy <span>Chhath Puja</span></h1>
+
+                <p class="hero-subtitle">Surya Dev Ki Kripa, Sab Par Ho Hamesha</p>
+                <p class="hero-description">
+                    Let us come together to celebrate the divine energy of the Sun
+                    and give thanks for life, health and prosperity.
+                </p>
+            </div>
+
+            <div class="mood-toggle" role="group" aria-label="Choose the sunset or sunrise scene">
+                <button type="button" data-mood="dusk" aria-pressed="true">🌇 Sandhya · Sunset</button>
+                <button type="button" data-mood="dawn" aria-pressed="false">🌅 Usha · Sunrise</button>
+            </div>
+
+            <div class="countdown-wrap" id="countdown">
+                <article class="countdown-card">
+                    <div class="countdown-heading">
+                        <span class="sun-symbol" aria-hidden="true">☀</span>
+                        <div>
+                            <h2>Sandhya Arghya</h2>
+                            <p>Evening offering · Sun 15 Nov</p>
+                        </div>
+                        <span class="status" data-status="upcoming">Upcoming</span>
+                    </div>
+                    <div class="timer" id="eveningTimer">
+                        <div class="time-box"><strong data-unit="days">00</strong><span>Days</span></div>
+                        <div class="time-box"><strong data-unit="hours">00</strong><span>Hours</span></div>
+                        <div class="time-box"><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+                        <div class="time-box"><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+                    </div>
+                </article>
+
+                <article class="countdown-card">
+                    <div class="countdown-heading">
+                        <span class="sun-symbol" aria-hidden="true">☀</span>
+                        <div>
+                            <h2>Usha Arghya</h2>
+                            <p>Morning offering · Mon 16 Nov</p>
+                        </div>
+                        <span class="status" data-status="upcoming">Upcoming</span>
+                    </div>
+                    <div class="timer" id="morningTimer">
+                        <div class="time-box"><strong data-unit="days">00</strong><span>Days</span></div>
+                        <div class="time-box"><strong data-unit="hours">00</strong><span>Hours</span></div>
+                        <div class="time-box"><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+                        <div class="time-box"><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="timing-note">Times are approximate (about 5:00 PM and 6:00 AM, your local time). Sunset and sunrise differ by city, so confirm with your local panchang.</p>
+
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-gold">🙏 Know More About Chhath</a>
+                <button type="button" class="btn btn-ghost" id="calendarButton">📅 Add to Calendar</button>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+            <div class="section-heading reveal">
+                <p class="section-kicker">A TRADITION OF FAITH</p>
+                <h2>The Festival of <span>Devotion</span></h2>
+                <p>
+                    Chhath Puja is a sacred festival dedicated to Surya Dev and
+                    Chhathi Maiya. It celebrates faith, purity, nature and the
+                    bond between families and communities.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <article class="value-card reveal" style="--d:0ms">
+                    <div class="value-icon" aria-hidden="true">☀</div>
+                    <h3>Faith</h3>
+                    <p>Deep devotion to Surya Dev and Chhathi Maiya.</p>
+                </article>
+                <article class="value-card reveal" style="--d:100ms">
+                    <div class="value-icon" aria-hidden="true">🌿</div>
+                    <h3>Purity</h3>
+                    <p>A time for discipline, cleanliness and selflessness.</p>
+                </article>
+                <article class="value-card reveal" style="--d:200ms">
+                    <div class="value-icon" aria-hidden="true">🤝</div>
+                    <h3>Togetherness</h3>
+                    <p>Families and communities come together in prayer.</p>
+                </article>
+                <article class="value-card reveal" style="--d:300ms">
+                    <div class="value-icon" aria-hidden="true">🪷</div>
+                    <h3>Gratitude</h3>
+                    <p>Giving thanks for the energy that sustains life.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= MARQUEE ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>ॐ सूर्याय नमः</span><span>✦</span><span>जय छठी मैया</span><span>✦</span><span>ॐ आदित्याय नमः</span><span>✦</span><span>छठ पूजा की हार्दिक शुभकामनाएँ</span><span>✦</span>
+                <span>ॐ सूर्याय नमः</span><span>✦</span><span>जय छठी मैया</span><span>✦</span><span>ॐ आदित्याय नमः</span><span>✦</span><span>छठ पूजा की हार्दिक शुभकामनाएँ</span><span>✦</span>
+            </div>
+        </div>
+
+        <!-- ================= JOURNEY ================= -->
+        <section class="journey section" id="journey">
+            <div class="section-heading reveal">
+                <p class="section-kicker">FOUR SACRED DAYS</p>
+                <h2>The <span>Journey</span> of Chhath</h2>
+                <p>From a purifying river bath to the first light of dawn, each day has its own rhythm of prayer.</p>
+            </div>
+
+            <div class="timeline" id="timeline">
+                <article class="day-card reveal" data-date="2026-11-13" style="--d:0ms">
+                    <span class="day-num">1</span>
+                    <p class="day-date">Fri · 13 Nov</p>
+                    <h3>Nahay Khay</h3>
+                    <p class="day-hindi">नहाय-खाय</p>
+                    <p>Devotees bathe in a river, clean the home and eat one pure, simple meal, commonly rice, chana dal and bottle gourd.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-14" style="--d:120ms">
+                    <span class="day-num">2</span>
+                    <p class="day-date">Sat · 14 Nov</p>
+                    <h3>Kharna</h3>
+                    <p class="day-hindi">खरना</p>
+                    <p>A fast from dawn to dusk, broken after sunset with sweet kheer and roti shared as prasad. The long fast begins.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-15" style="--d:240ms">
+                    <span class="day-num">3</span>
+                    <p class="day-date">Sun · 15 Nov</p>
+                    <h3>Sandhya Arghya</h3>
+                    <p class="day-hindi">संध्या अर्घ्य</p>
+                    <p>Families gather at the ghat and offer arghya to the setting sun, with soops of thekua and fruit and folk songs in the air.</p>
+                </article>
+                <article class="day-card reveal" data-date="2026-11-16" style="--d:360ms">
+                    <span class="day-num">4</span>
+                    <p class="day-date">Mon · 16 Nov</p>
+                    <h3>Usha Arghya</h3>
+                    <p class="day-hindi">उषा अर्घ्य</p>
+                    <p>At dawn, devotees stand in the water and greet the rising sun. The fast is broken and prasad is shared with everyone.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= OFFERINGS ================= -->
+        <section class="offerings section" id="offerings">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">THE SACRED SOOP</p>
+                <h2>Offerings of <span>Gratitude</span></h2>
+                <p>Every item in the bamboo soop comes from the earth and the season, offered with thanks.</p>
+            </div>
+
+            <div class="offer-grid">
+                <article class="offer-card reveal" style="--d:0ms">
+                    <span class="offer-emoji" aria-hidden="true">🍪</span>
+                    <h3>Thekua</h3>
+                    <p>The signature prasad: a crisp sweet of wheat flour and jaggery fried in ghee.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:80ms">
+                    <span class="offer-emoji" aria-hidden="true">🎋</span>
+                    <h3>Sugarcane</h3>
+                    <p>Tall stalks of the winter harvest, often tied together near the ghat.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:160ms">
+                    <span class="offer-emoji" aria-hidden="true">🥥</span>
+                    <h3>Coconut</h3>
+                    <p>A whole coconut, a symbol of purity and an offering in countless Hindu rituals.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:240ms">
+                    <span class="offer-emoji" aria-hidden="true">🍌</span>
+                    <h3>Seasonal Fruit</h3>
+                    <p>Bananas, oranges, pomelo and more, offered fresh as the season's gifts.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:320ms">
+                    <span class="offer-emoji" aria-hidden="true">🧺</span>
+                    <h3>Soop &amp; Daura</h3>
+                    <p>Handwoven bamboo trays and baskets that carry the offerings to the water.</p>
+                </article>
+                <article class="offer-card reveal" style="--d:400ms">
+                    <span class="offer-emoji" aria-hidden="true">🪔</span>
+                    <h3>Diya</h3>
+                    <p>Earthen lamps lit at the riverbank, their light floating across the water.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= DIYA RIVER ================= -->
+        <section class="diya-section section" id="diya">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">A QUIET MOMENT</p>
+                <h2>Float a <span>Diya</span> on the River</h2>
+                <p>Tap or click anywhere on the water to release a lamp, and make a silent wish as it drifts away.</p>
+            </div>
+
+            <div class="river-box reveal" id="riverBox" role="button" tabindex="0" aria-label="Float a diya on the river. Press Enter or Space.">
+                <div class="river-glow"></div>
+                <p class="river-hint" id="riverHint" aria-live="polite">Tap the water 🪔</p>
+            </div>
+
+            <div class="diya-actions">
+                <button type="button" class="btn btn-gold" id="diyaButton">🪔 Float a Diya</button>
+                <div class="diya-stats">
+                    <p class="stat">You have lit <strong id="diyaCount">0</strong> diyas</p>
+                    <p class="stat stat-world">🌍 Worldwide lit <strong id="worldCount">…</strong> diyas</p>
+                </div>
+                <p class="stat-note" id="worldNote" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- ================= GREETING CARD ================= -->
+        <section class="card-section section" id="card">
+            <div class="section-heading light reveal">
+                <p class="section-kicker">SEND YOUR WISHES</p>
+                <h2>Make a Chhath <span>Greeting Card</span></h2>
+                <p>Add your name, pick a sky and share the blessings with family and friends.</p>
+            </div>
+
+            <div class="card-layout">
+                <form class="card-form reveal" id="cardForm">
+                    <label class="field">
+                        <span>Your name</span>
+                        <input type="text" id="cardName" maxlength="28" placeholder="e.g. Anita &amp; family" autocomplete="name">
+                    </label>
+
+                    <label class="field">
+                        <span>Blessing</span>
+                        <select id="cardMsg">
+                            <option value="0">Health, happiness and prosperity</option>
+                            <option value="1">Faith, gratitude and golden light</option>
+                            <option value="2">Peace and joy for your home</option>
+                        </select>
+                    </label>
+
+                    <fieldset class="field">
+                        <legend>Sky</legend>
+                        <div class="swatches">
+                            <label><input type="radio" name="theme" value="dusk" checked><span class="swatch swatch-dusk">Sunset</span></label>
+                            <label><input type="radio" name="theme" value="dawn"><span class="swatch swatch-dawn">Sunrise</span></label>
+                            <label><input type="radio" name="theme" value="gold"><span class="swatch swatch-gold">Golden</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="card-actions">
+                        <button type="button" class="btn btn-gold" id="cardDownload">⬇ Download</button>
+                        <button type="button" class="btn btn-ghost" id="cardShare" hidden>📤 Share</button>
+                        <a class="btn btn-ghost" id="cardWhatsApp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </form>
+
+                <div class="card-preview reveal" style="--d:120ms">
+                    <canvas id="cardCanvas" width="1080" height="1080" role="img" aria-label="Chhath Puja greeting card preview"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="faq section" id="faq">
+            <div class="section-heading reveal">
+                <p class="section-kicker">GOOD TO KNOW</p>
+                <h2>Questions &amp; <span>Answers</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="reveal">
+                    <summary>What is Chhath Puja?</summary>
+                    <p>An ancient Hindu festival honouring Surya, the Sun god, and Chhathi Maiya. It falls on the sixth day (Shashthi) of the bright fortnight of Kartik, a few days after Diwali. It is celebrated most widely in Bihar, Jharkhand, eastern Uttar Pradesh and the Terai region of Nepal, and by communities around the world.</p>
+                </details>
+                <details class="reveal">
+                    <summary>Why are offerings made at sunset and sunrise?</summary>
+                    <p>The rituals thank the Sun for sustaining life. The setting sun is honoured in the evening (Sandhya Arghya) and the rising sun the next morning (Usha Arghya), with devotees standing in the water of a river or pond.</p>
+                </details>
+                <details class="reveal">
+                    <summary>What is the fast like?</summary>
+                    <p>Devotees, known as vratis, observe a strict fast. After Kharna, many keep a nirjala fast, with no food or water, for roughly 36 hours until the morning arghya. Cleanliness and simple, carefully prepared food are central to the festival.</p>
+                </details>
+                <details class="reveal">
+                    <summary>Can anyone take part?</summary>
+                    <p>Yes. Both women and men observe Chhath, and neighbours often help clean the ghats and share prasad. If you visit a ghat, dress modestly, keep footwear away from the offering area and follow local guidance.</p>
+                </details>
+                <details class="reveal">
+                    <summary>How accurate are the countdowns?</summary>
+                    <p>They use approximate times (about 5:00 PM and 6:00 AM) in your device's local time. Sunset and sunrise vary by city, so please confirm exact timings with your local panchang or ghat committee.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-sun" aria-hidden="true">☀</div>
+        <h3>॥ जय छठी मैया ॥</h3>
+        <p>Faith <span>•</span> Devotion <span>•</span> Gratitude</p>
+        <small>© 2026 Chhath Puja Celebration</small>
+    </footer>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>↑</button>
+
+</body>
+</html>
